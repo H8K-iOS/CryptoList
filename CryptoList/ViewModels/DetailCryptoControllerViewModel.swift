@@ -51,7 +51,7 @@ final class DetailCryptoControllerViewModel {
         if let maxSupply = self.coin.maxSupply  {
             return "Max supply: \(maxSupply)"
         } else {
-            return "123\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312\n123\n312"
+            return "Max supply: unknown supply"
         }
     }
 }
