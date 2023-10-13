@@ -1,10 +1,3 @@
-//
-//  CoinService.swift
-//  CryptoList
-//
-//  Created by Alexandr Alimov on 08/10/23.
-//
-
 import Foundation
 
 enum CoinServiceError: Error {
@@ -52,5 +45,4 @@ class CoinService {
             }
         }.resume()
     }
-    
 }

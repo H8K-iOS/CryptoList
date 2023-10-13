@@ -1,10 +1,3 @@
-//
-//  HTTP.swift
-//  CryptoList
-//
-//  Created by Alexandr Alimov on 07/10/23.
-//
-
 import Foundation
 
 enum HTTP {

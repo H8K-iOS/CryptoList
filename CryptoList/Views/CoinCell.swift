@@ -1,10 +1,3 @@
-//
-//  CoinCell.swift
-//  CryptoList
-//
-//  Created by Alexandr Alimov on 05/10/23.
-//
-
 import UIKit
 import SDWebImage
 
@@ -36,7 +29,6 @@ final class CoinCell: UITableViewCell {
     }()
     
     //MARK: - Lifecycle
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.setupUI()
@@ -50,18 +42,6 @@ final class CoinCell: UITableViewCell {
         self.coin = coin
         self.coinName.text = coin.name
         self.coinLogo.sd_setImage(with: coin.logoURL)
-        
-        //without SDWebImg
-        //        DispatchQueue.global().async { [weak self] in
-        //            if let logoURL = coin.logoURL,
-        //               let imageData = try? Data(contentsOf: logoURL),
-        //               let logoImage = UIImage(data: imageData) {
-        //                DispatchQueue.main.async {
-        //                    self?.coinLogo.image = logoImage
-        //                }
-        //
-        //            }
-        //        }
     }
     
     //MARK: - Prepare for reuse
@@ -87,5 +67,4 @@ final class CoinCell: UITableViewCell {
             coinName.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
     }
-    
 }

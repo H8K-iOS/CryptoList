@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  CryptoList
-//
-//  Created by Alexandr Alimov on 05/10/23.
-//
-
 import UIKit
 import SDWebImage
 
@@ -19,8 +12,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = UINavigationController(rootViewController: HomeViewController())
         window?.makeKeyAndVisible()
-        
-//        SDImageCache.shared.config.maxDiskSize = 1000000 * 200
     }
     
 }

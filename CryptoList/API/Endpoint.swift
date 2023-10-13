@@ -1,17 +1,8 @@
-//
-//  Endpoint.swift
-//  CryptoList
-//
-//  Created by Alexandr Alimov on 07/10/23.
-//
-
 import Foundation
-
 
 enum Endpoint {
     
     case fetchCoins(url: String = "/v1/cryptocurrency/listings/latest")
-    //  case postCoins(url: String = "/v1/postCoin")
     
     //MARK: - URL request
     var request: URLRequest? {
@@ -54,14 +45,12 @@ enum Endpoint {
         }
     }
     
-    
     private var httpMethod: String {
         switch self {
         case .fetchCoins:
             return HTTP.Method.get.rawValue
         }
     }
-    
     
     private var httpBody: Data? {
         switch self {
@@ -74,7 +63,6 @@ enum Endpoint {
 
 //MARK: - Extension for URLRequest
 extension URLRequest {
-    
     mutating func addValues(for endpoint: Endpoint) {
         switch endpoint {
         case .fetchCoins:
@@ -85,18 +73,4 @@ extension URLRequest {
         }
         
     }
-    
 }
-
-//MARK: - if we add 1 more case or more
-/*
- 
- private var path: String {
- switch self {
- case .fetchCoins(let url), .case(), .case(),
- .postCoins(let url):
- return url
- }
- }
- 
- */

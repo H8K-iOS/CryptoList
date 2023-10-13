@@ -1,10 +1,3 @@
-//
-//  DetailCryptoViewController.swift
-//  CryptoList
-//
-//  Created by Alexandr Alimov on 05/10/23.
-//
-
 import UIKit
 
 final class DetailCryptoViewController: UIViewController {
@@ -55,13 +48,6 @@ extension DetailCryptoViewController {
         
         self.coinMaxSupplyLabel.text = self.viewModel.maxSupplyLabel
         self.coinLogo.sd_setImage(with: self.viewModel.coin.logoURL)
-        
-        // Withoud SDWebImg
-        //        self.viewModel.onImageLoaded = { [weak self] logoImage in
-        //            DispatchQueue.main.async {
-        //                self?.coinLogo.image = logoImage
-        //            }
-        //        }
     }
     
     private func setViews() {
@@ -93,7 +79,7 @@ extension DetailCryptoViewController {
         coinMaxSupplyLabel.textAlignment = .center
         coinMaxSupplyLabel.font = .systemFont(ofSize: 20, weight: .semibold)
         coinMaxSupplyLabel.numberOfLines = 500
-    
+        
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
         coinLogo.translatesAutoresizingMaskIntoConstraints = false
@@ -127,7 +113,6 @@ extension DetailCryptoViewController {
             contentView.leftAnchor.constraint(equalTo: scrollView.leftAnchor),
             contentView.rightAnchor.constraint(equalTo: scrollView.rightAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             
             coinLogo.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
@@ -135,9 +120,7 @@ extension DetailCryptoViewController {
             coinLogo.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             coinLogo.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             coinLogo.heightAnchor.constraint(equalToConstant: 200),
-            
-            
-            
+
             vStackView.topAnchor.constraint(equalTo: coinLogo.bottomAnchor, constant: 18),
             vStackView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             vStackView.rightAnchor.constraint(equalTo: contentView.rightAnchor),

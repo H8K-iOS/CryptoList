@@ -1,10 +1,3 @@
-//
-//  CoinError.swift
-//  CryptoList
-//
-//  Created by Alexandr Alimov on 06/10/23.
-//
-
 import Foundation
 
 class CoinStatus: Decodable {

@@ -1,11 +1,5 @@
-//
-//  Coin.swift
-//  CryptoList
-//
-//  Created by Alexandr Alimov on 05/10/23.
-//
-
 import Foundation
+
 struct CoinArray: Decodable {
     let data: [Coin]
 }
@@ -35,17 +29,7 @@ struct PricingData: Decodable {
     let USD: USD
 }
 
-
 struct USD: Decodable {
     let price: Double
     let market_cap: Double
 }
-
-
-//1. Construct a URLRequest
-
-
-//2. Make the URLSession Call
-
-
-//3. Convert the JSON Data to swift struct

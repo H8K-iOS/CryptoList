@@ -1,10 +1,3 @@
-//
-//  HomeViewModels.swift
-//  CryptoList
-//
-//  Created by Alexandr Alimov on 05/10/23.
-//
-
 import UIKit
 
 final class HomeControllerViewModel {

@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  CryptoList
-//
-//  Created by Alexandr Alimov on 05/10/23.
-//
-
 import UIKit
 
 final class HomeViewController: UIViewController {
@@ -86,7 +79,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         let inSearchMode = self.viewModel.ifSearchMode(searchController)
         let coin = inSearchMode ? self.viewModel.filteredCoins[indexPath.row] : self.viewModel.allCoins[indexPath.row]
-        // let coin = self.viewModel.allCoins[indexPath.row]
         cell.configCell(with: coin)
         
         return cell
@@ -100,7 +92,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         self.tableView.deselectRow(at: indexPath, animated: true)
         let inSearchMode = self.viewModel.ifSearchMode(searchController)
         let coin = inSearchMode ? self.viewModel.filteredCoins[indexPath.row] : self.viewModel.allCoins[indexPath.row]
-        // let coin = self.viewModel.allCoins[indexPath.row]
         let vm = DetailCryptoControllerViewModel(coin)
         let vc = DetailCryptoViewController(vm)
         navigationController?.pushViewController(vc, animated: true)
